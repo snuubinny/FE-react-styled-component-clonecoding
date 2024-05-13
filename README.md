@@ -22,8 +22,11 @@ https://getbootstrap.com/docs/4.3/examples/album/
 ## 구현 화면
 
 (이곳에 구현한 이미지를 이곳에 첨부해주세요. 아래는 예시 이미지입니다.)
+![완료1](https://github.com/snuubinny/FE-react-styled-component-clonecoding/assets/163654696/7f78ef11-386b-4e4c-9370-2b69c1dcb75f)
 
-![](https://velog.velcdn.com/images/wuzoo/post/509d4112-3edb-482d-82cb-89edf105a060/image.png)
+![완료2](https://github.com/snuubinny/FE-react-styled-component-clonecoding/assets/163654696/931db162-9178-4c0e-92f3-e7dd207d1a51)
+
+
 
 ## 구현 조건
 
