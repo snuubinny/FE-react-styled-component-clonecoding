@@ -38,4 +38,47 @@ https://getbootstrap.com/docs/4.3/examples/album/
 
 주된 컴포넌트인 헤더, 푸터, 포토카드(사진과 글이 있는 것), 버튼에 대해 어떤 계층으로 설계했는지 이곳에 작성해주세요. 그리고 자식 컴포넌트 들에 대해서 어떤 의도를 갖고 설계했는지(ex 정렬하기 위해서, border를 주기 위해서 등) 부담없이 간단하게 적으면 됩니다. (아래는 예시입니다.)
 
-![](https://velog.velcdn.com/images/wuzoo/post/ab092dd4-595e-41ab-a850-85cab0c83e80/image.png)
+#Benner
+
+const Btext1 = styled.p`
+->글자 배치를 위해 사용(줄 바꾸는 법을 몰라서 한줄 한줄씩 따로 만들었습니다..)
+const StyledButton = styled.button`
+->버튼 삽입(두 버튼의 색이 달라 props로 색을 받아서 입힐 수 있도록 Button.jsx에 
+스타일 컴포넌트 사용해서 만들었습니다)
+
+#Box
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 설정 */
+    gap: 24px; /* 각 Box 사이의 간격 설정 */
+    background-color: #F8F9FA;
+}
+->Box.css를 따로 만들어 grid 설정하고 3개의 열로 만들 수 있게 설정
+
+const boxIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+<div className="box-container">
+   {boxIndex.map(Index => (
+      <Box key={Index} boxColor='white'/>
+          ))}
+    </div>
+
+->Mypage.jsx에 임의로 인덱스 부여하고 map으로 배치
+
+#Footer
+
+const Ftext = styled.p`
+  font-size: 15px;
+  color:#4F7BF6;
+  margin-left:1250px;
+  margin-top:-38px;
+`;
+->특정 글자만 색을 바꾸는게 안돼서 Ftext6까지 만들어서 배치했습니다ㅠㅠ
+
+#Header
+
+position: fixed;
+z-index: 1000; 
+->헤더가 고정되면서 다른 요소들에 가려지지 않게 고정하기 위해 설정
+
