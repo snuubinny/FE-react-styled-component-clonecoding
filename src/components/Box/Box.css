@@ -1,0 +1,27 @@
+.Box {
+    width: 400px;
+    height: 400px;
+    margin: 24px;
+    border-radius: 3%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* 텍스트 컨테이너를 상대적으로 배치하기 위해 필요 */
+}
+
+.text-container {
+    text-align: center; /* 텍스트를 가운데로 정렬 */
+    color: black; /* 텍스트 색상 설정 */
+    
+}
+
+.text-container p {
+    margin-bottom: -10px; 
+    
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 설정 */
+    gap: 24px; /* 각 Box 사이의 간격 설정 */
+    background-color: #F8F9FA;
+}

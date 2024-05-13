@@ -1,6 +1,24 @@
 import React from 'react';
+import styled from 'styled-components'; // styled-components 가져오기
 import "./Benner.css";
-import Button from '../Button/Button'; // Button 컴포넌트 import 추가
+import Button from '../Button/Button';
+
+const Btext1 = styled.p`
+  font-size: 20px;
+  color: grey;
+  margin-top:-10px;
+`;
+const Btext2 = styled.p`
+  font-size: 20px;
+  color: grey;
+  margin-top:-20px;
+`;
+const Btext3 = styled.p`
+  font-size: 20px;
+  color: grey;
+  margin-top:-20px;
+`;
+
 
 const Benner = (props) => {
     return (
@@ -17,11 +35,19 @@ const Benner = (props) => {
            }}
         >
             <h1>Album Example</h1>
-            <p>Something short and leading about the collection below—its contents,</p>
-            <p>the creator, etc. Make it short and sweet, but not too short so folks don’t</p>
-            <p>simply skip over it entirely.</p>
-            {/* 버튼 추가 */}
-            <Button label="Main call to action" color="#2563eb" onClick={() => console.log("Button Clicked")} />
+            <Btext1>Something short and leading about the collection below—its contents,</Btext1>
+            <Btext2>the creator, etc. Make it short and sweet, but not too short so folks don’t</Btext2>
+            <Btext3>simply skip over it entirely.</Btext3>
+
+            <div style={{display:'flex',flexDirection:'row'}}>
+             <div style={{marginRight:'5px'}}>
+              <Button label="Main call to action" color="#4F7BF6" hoverColor="#4269D1"/>
+             </div>
+             <div>
+              <Button label="Secondary action" color="#6F757C" hoverColor="#5E6369"/>
+             </div>
+            </div>
+
         </div>
     );
 };
